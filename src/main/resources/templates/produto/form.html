@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang=”pt-br” xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CathonFit</title>
+
+	<!-- Bootstrap -->
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilo.css">
+     <link rel="stylesheet" href="css/footer.css">
+
+
+</head>
+
+<body>
+
+
+	
+   <header>
+            <nav class="navbar navbar-dark ">
+                <div class="banner">
+                    <img src="imagem/logo.PNG" alt="" width="150px" height="100px">
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+
+                            <a class="nav-link" href="/"><p>Pagina Incial</p><span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link desative" href="/cadastrar"><p>Cadastar</p></a>
+                        </li>
+                      
+                    </ul>
+
+                </div>
+            </nav>
+        </header>
+
+
+        
+  
+
+
+
+	<div class="container">
+
+		<h1>Produtos</h1>
+
+		<br>
+
+<th:block th:include="mensagem-validacao"></th:block>
+
+		<form method="post">
+
+
+			<div class="form-group">
+				<label for=""><b>Nome:</b> </label> <input type="text" class="form-control" value=""
+					placeholder="Insira o nome" name="nome" required> <small class="form-text text-muted"></small>
+			</div>
+
+			<div class="row">
+				<div class="col">
+					<div class="form-group">
+						<label for=""><b>Afiliado:</b></label><input type="text" value="" name="afiliado" class="form-control"
+							placeholder="Insira o nome da empresa afiliada..." required /> <small class="form-text text-muted"><i>* Utilize
+								somente números.</i></small>
+					</div>
+
+				</div>
+				<div class="col">
+					<label for=""><b>Comissão</b> </label> <input type="text" value="" name="comissao" class="form-control"
+						placeholder="0,00" required /><small class="form-text text-muted"><i>* Utilize
+                            somente números.</i></small>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col">
+					<div class="form-group">
+						<label for=""><b>Valor:</b></label><input type="text" value="" name="valor" class="form-control"
+							placeholder="Insira o valor total do produto" required /> 
+					</div>
+
+				</div>
+				<div class="col">
+					<div class="form-group">
+						<label for=""><b>link:</b></label><input type="text" value="" name="link"
+							class="form-control" placeholder="Insira o link do código de afiliado:" required /> 
+					</div>
+
+				</div>
+			</div>
+
+
+
+			<button type="submit" class="btn btn-success">Adicionar Produto</button>
+
+		</form>
+
+	</div>
+
+<footer id="myFooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h5>Inicio</h5>
+                    <ul>
+                        <li><a href="/">Pagina Inicial</a></li>
+                        <li><a href="/cadastrar">Cadastro</a></li>
+                       
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Sobre nós</h5>
+                    <ul>
+                        <li><a href="#">Informações da Empresa</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Suporte</h5>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Telefones</a></li>
+                        <li><a href="#">Chat</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 info">
+                    <h5>Informações</h5>
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis eaque vitae dolor ab, possimus sequi nam eveniet in optio doloribus illo necessitatibus aut obcaecati deserunt exercitationem, quis qui accusamus hic. </p>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+
+
+
+
+
+	<!--JavaScript bootstrap-->
+	<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+
+	</script>
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>

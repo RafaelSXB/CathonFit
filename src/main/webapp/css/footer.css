@@ -1,0 +1,61 @@
+#myFooter {
+
+    color: white;
+    margin-top: 20px;
+    border-top: 2px rgba(103, 245, 103, 0.192) solid;
+}
+
+#myFooter .row {
+    margin-bottom: 60px;
+
+}
+
+#myFooter ul {
+    list-style-type: none;
+    padding-left: 0;
+    line-height: 1.7;
+    border-top: 2px rgba(103, 245, 103, 0.192) solid;
+}
+
+#myFooter h5 {
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+
+#myFooter a {
+    color: green;
+    text-decoration: none;
+}
+
+#myFooter a:hover,
+#myFooter a:focus {
+    text-decoration: none;
+    text-decoration: underline;
+}
+
+#myFooter .second-bar {
+    text-align: center;
+    background-color: #33373e;
+    text-align: center;
+}
+
+
+
+
+@media screen and (max-width: 767px) {
+    #myFooter {
+        text-align: center;
+    }
+
+    #myFooter .info{
+        text-align: center;
+    }
+}
+
+
+
+
+
